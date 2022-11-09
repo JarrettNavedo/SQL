@@ -1,0 +1,27 @@
+--Create a strongman equipment store database
+
+CREATE TABLE JarrettStrongmanStore (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, weight INTEGER, rating INTEGER);
+
+INSERT INTO JarrettStrongmanStore VALUES (1, "Log", 300, 90, 8);
+INSERT INTO JarrettStrongmanStore VALUES (2, "Atlas Stone", 120, 240, 9);
+INSERT INTO JarrettStrongmanStore VALUES (3, "Farmers Handle", 45, 200, 6);
+INSERT INTO JarrettStrongmanStore VALUES (4, "Yoke", 175, 400, 9);
+INSERT INTO JarrettStrongmanStore VALUES (5, "Power Rack", 300, 1000, 10);
+INSERT INTO JarrettStrongmanStore VALUES (6, "Axle", 25, 60, 7);
+INSERT INTO JarrettStrongmanStore VALUES (7, "Husafell", 200, 350, 8);
+INSERT INTO JarrettStrongmanStore VALUES (8, "Tire", 500, 100, 6);
+INSERT INTO JarrettStrongmanStore VALUES (9, "Circus DB", 80, 400, 7);
+INSERT INTO JarrettStrongmanStore VALUES (10, "DL Bar", 45, 300, 9);
+INSERT INTO JarrettStrongmanStore VALUES (11, "Kettlebell", 53, 110, 5);
+INSERT INTO JarrettStrongmanStore VALUES (12, "Sandbag", 175, 80, 7);
+INSERT INTO JarrettStrongmanStore VALUES (13, "Keg", 225, 50, 8);
+INSERT INTO JarrettStrongmanStore VALUES (14, "Iron Cross", 125, 250, 9);
+INSERT INTO JarrettStrongmanStore VALUES (15, "Duck Walk", 150, 325, 8);
+
+--display the database ordered by price
+SELECT * FROM JarrettStrongmanStore 
+ORDER BY price;
+
+--display two columns weight and price of the database
+SELECT weight, SUM(price) FROM JarrettStrongmanStore 
+GROUP BY weight;
